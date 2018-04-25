@@ -1,0 +1,39 @@
+body {
+    line-height: 1.5;
+    font-family: arial, sans-serif;
+}
+
+h1 {
+  font-size: 38px
+}
+
+h2 {
+  font-size: 32px
+}
+
+.ingredients-list {
+  list-style: square inside;
+}
+
+ol {
+    list-style: circle;
+}
+
+header img {
+  width : 100px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  background-color: green;
+}
+
+
+.user_review {
+  font-family: cursive;
+  
+}
