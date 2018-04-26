@@ -25,7 +25,7 @@ class Hand
     when 2
       @hand_of_cards.each do |card|
         if @hand_of_cards.count(card) > 1
-          sum += card.value * 30
+          sum += card.value *
         else
           sum += card.value
         end

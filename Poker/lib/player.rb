@@ -6,11 +6,18 @@ class Player
   end
 
   def make_bet
-    puts "Do you want to make a bet? \n If not, Enter 0"
-    bet = gets.chomp.to_i
-  rescue MoneyError => err
-    puts "Invalid amount"
-    retry
+    puts "Do you want to make a raise?(y/n)"
+    choice = gets.chomp
+    break if choice == "n"
+    begin
+      if choice == 'y'
+        puts "How much do you want to raise by?"
+        return gets.chomp.to_i
+      end
+    rescue MoneyError => err
+      puts "Invalid amount"
+      retry
+    end
   end
 
   def see
@@ -24,15 +31,6 @@ class Player
     puts "Do you want to fold?(y/n)"
     choice = gets.chomp
     choice == 'y' ? true : false
-  end
-
-  def raise
-    puts "Do you want to make a raise?(y/n)"
-    choice = gets.chomp
-    if choice == 'y'
-      puts "How much do you want to raise by?"
-      return gets.chomp.to_i
-    end
   end
 
   def discard_cards
